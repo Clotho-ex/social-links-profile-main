@@ -1,0 +1,149 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+button,
+input,
+label {
+  font: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  color: var(--text-color);
+}
+
+:root {
+  --primary-color: #141414;
+  --secondary-color: #1f1f1f;
+  --grey: #333333;
+  --accent-color: #c4f82a;
+  --text-color: #ffffff;
+
+  --small-space: 8px;
+  --medium-space: 16px;
+  --large-space: 24px;
+  --xlarge-space: 32px;
+}
+
+/* Utils */
+
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: var(--medium-space);
+}
+
+.attribution {
+  font-size: 11px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-size: 11px;
+}
+
+/* General Styling */
+
+.profile-pic img {
+  border-radius: 50%;
+  margin-bottom: var(--large-space);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px 24px 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: var(--medium-space);
+  width: 350px;
+  height: auto;
+  border-radius: 12px;
+  background-color: var(--secondary-color);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.location {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: -20px;
+  color: var(--accent-color);
+  margin-bottom: var(--large-space);
+}
+
+.bio {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: var(--large-space);
+}
+
+.btn {
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: bold;
+  width: 280px;
+  height: 45px;
+  line-height: 1.5;
+  transition: background-color 0.3s ease;
+  border-radius: var(--small-space);
+  padding: var(--small-space);
+  margin-bottom: var(--medium-space);
+  background-color: var(--grey);
+  color: var(--text-color);
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: var(--accent-color);
+  color: var(--grey);
+}
+
+.btn:active {
+  background-color: #DAFB76;
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    min-height: 100vh;
+    padding: 20px var(--large-space) 20px;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--large-space);
+  }
+}
